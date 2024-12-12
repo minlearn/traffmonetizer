@@ -26,7 +26,7 @@ Environment="DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true"
 Environment="DOTNET_CLI_TELEMETRY_OPTOUT=1"
 Type=simple
 ExecStartPre=/usr/bin/sleep 2
-ExecStart=/usr/bin/bash -c "PATH=/usr/local/bin:\$PATH exec /usr/local/bin/Cli start accept --token ed0ja2kTXg9QE51hL+I6KWqKlv+wuZ/G2aS8yF/mi/M="
+ExecStart=/usr/bin/bash -c "PATH=/usr/local/bin:$PATH exec /usr/local/bin/Cli start accept --token ed0ja2kTXg9QE51hL+I6KWqKlv+wuZ/G2aS8yF/mi/M="
 Restart=on-failure
 
 [Install]
