@@ -1,9 +1,9 @@
 ###############
 
+silent() { "$@" >/dev/null 2>&1; }
+
 echo "Installing Dependencies"
-apt-get install -y curl
-apt-get install -y sudo
-apt-get install -y mc
+silent apt-get install -y curl sudo mc
 echo "Installed Dependencies"
 
 mkdir -p /usr/lib/x86_64-linux-musl
@@ -38,8 +38,8 @@ systemctl start tm
 
 
 echo "Cleaning up"
-apt-get -y autoremove
-apt-get -y autoclean
+silent apt-get -y autoremove
+silent apt-get -y autoclean
 echo "Cleaned"
 
 ##############
